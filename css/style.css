@@ -1,0 +1,175 @@
+:root {
+  --white-color: white;
+  --main-color: #ff206e;
+}
+
+#home {
+  background-image: url(../images/bg_osaka.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: var(--white-color);
+}
+
+#home a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transition: all 1s;
+}
+
+.icon:hover {
+  border-color: var(--white-color) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: var(--main-color);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--white-color);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+
+/* S T A R T      A B O U T     S E C T I O N    */
+
+#about {
+  background-image: url(../images/light_dot.jpg);
+}
+
+#about .about-p {
+  color: var(--main-color);
+}
+
+/* E N D     A B O U T     S E C T I O N    */
+
+.section-title h2 {
+  color: #f1f1f1;
+  font-size: 5rem;
+  letter-spacing: 20px;
+  font-weight: 900;
+}
+
+/* SERVICE START */
+
+#services {
+  background-image: url(../images/dark_dot.jpg);
+}
+
+#services .item h3::after {
+  content: "";
+  width: 20%;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 1s;
+}
+
+#services .item:hover h3::after {
+  width: 45%;
+}
+#services i {
+  transition: all 1s;
+}
+#services .item:hover i {
+  color: var(--main-color);
+}
+
+.custome-img {
+  width: 5rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-indent: 0;
+}
+
+.nav-tabs {
+  border: none;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border: none;
+  color: var(--main-color);
+}
+.nav-tabs .nav-link {
+  border: none;
+  color: gray;
+}
+
+#gallery figcaption {
+  --space: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  width: calc(100% - 2 * var(--space));
+  top: 0;
+  bottom: var(--space);
+  left: var(--space);
+  right: var(--space);
+  padding: var(--space);
+
+  transform: translateY(-100%);
+  transition: 1s all ease-in-out;
+}
+
+#gallery figure:hover figcaption {
+  transform: translateY(0);
+}
+
+.parent {
+  display: grid;
+  grid-auto-rows: 5rem;
+  grid-template-areas:
+    "header header header header header header header header header header"
+    ". . main-content main-content main-content  main-content sidebar sidebar  . ."
+    ". . main-content main-content main-content  main-content sidebar sidebar . ."
+    ". . main-content main-content main-content  main-content sidebar sidebar . ."
+    ". . twin1 twin1 twin1 twin2 twin2 twin2 . ."
+    ". . twin1 twin1 twin1 twin2 twin2 twin2 . ."
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+.parent > div {
+  background-color: teal;
+  border: 0.25rem solid black;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main-content {
+  grid-area: main-content;
+}
+
+.twin1 {
+  grid-area: twin1;
+}
+
+.twin2 {
+  grid-area: twin2;
+}
+
+.footer {
+  grid-area: footer;
+}
